@@ -4,19 +4,10 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="spring 环境的搭建, 吃土的小木">
-    <meta name="description" content="1. spring环境项目的创建
-file  –&amp;gt; project —&amp;gt;Maven 
- 
-
-不需要进行操作，点击  next
-
-自定义项目的名称，和要保存的路径
- 
-
-创建多模块的项目要删除父模块的 src 目录
-
-创建多模块 ">
+    <meta name="keywords" content="使用 spring JDBC访问数据库, 吃土的小木">
+    <meta name="description" content="3.使用 spring JDBC 访问数据库
+配置  database 的 pom 加上  数据库连接池， mysql 驱动  mysql jdbc 的依赖包
+12345678910111213141516171819202122&amp;lt;d">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -28,7 +19,7 @@ file  –&amp;gt; project —&amp;gt;Maven
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>spring 环境的搭建 | 吃土的小木</title>
+    <title>使用 spring JDBC访问数据库 | 吃土的小木</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.min.css">
@@ -320,12 +311,12 @@ file  –&amp;gt; project —&amp;gt;Maven
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/6.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/23.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">spring 环境的搭建</h1>
+                    <h1 class="description center-align post-title">使用 spring JDBC访问数据库</h1>
                 </div>
             </div>
         </div>
@@ -478,41 +469,29 @@ file  –&amp;gt; project —&amp;gt;Maven
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h4 id="1-spring环境项目的创建"><a href="#1-spring环境项目的创建" class="headerlink" title="1. spring环境项目的创建"></a>1. spring环境项目的创建</h4><ol>
-<li><p>file  –&gt; project —&gt;Maven </p>
-<p> <img src="/spring-%E7%8E%AF%E5%A2%83%E7%9A%84%E6%90%AD%E5%BB%BA/001.png"></p>
+                <h4 id="3-使用-spring-JDBC-访问数据库"><a href="#3-使用-spring-JDBC-访问数据库" class="headerlink" title="3.使用 spring JDBC 访问数据库"></a>3.使用 spring JDBC 访问数据库</h4><ol>
+<li><p>配置  database 的 pom 加上  数据库连接池， mysql 驱动  mysql jdbc 的依赖包</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">&lt;dependencies&gt;</span><br><span class="line">     &lt;!-- https://mvnrepository.com/artifact/commons-dbcp/commons-dbcp --&gt;</span><br><span class="line">     &lt;dependency&gt;</span><br><span class="line">         &lt;groupId&gt;commons-dbcp&lt;/groupId&gt;</span><br><span class="line">         &lt;artifactId&gt;commons-dbcp&lt;/artifactId&gt;</span><br><span class="line">         &lt;version&gt;1.4&lt;/version&gt;</span><br><span class="line">     &lt;/dependency&gt;</span><br><span class="line">     &lt;!-- https://mvnrepository.com/artifact/mysql/mysql-connector-java --&gt;</span><br><span class="line">     &lt;dependency&gt;</span><br><span class="line">         &lt;groupId&gt;mysql&lt;/groupId&gt;</span><br><span class="line">         &lt;artifactId&gt;mysql-connector-java&lt;/artifactId&gt;</span><br><span class="line">         &lt;version&gt;8.0.25&lt;/version&gt;</span><br><span class="line">     &lt;/dependency&gt;</span><br><span class="line">     &lt;!-- https://mvnrepository.com/artifact/org.springframework/spring-jdbc --&gt;</span><br><span class="line">     &lt;dependency&gt;</span><br><span class="line">         &lt;groupId&gt;org.springframework&lt;/groupId&gt;</span><br><span class="line">         &lt;artifactId&gt;spring-jdbc&lt;/artifactId&gt;</span><br><span class="line">         &lt;version&gt;$&#123;spring.version&#125;&lt;/version&gt;</span><br><span class="line">     &lt;/dependency&gt;</span><br><span class="line">   </span><br><span class="line"> &lt;/dependencies&gt;</span><br><span class="line">   </span><br></pre></td></tr></table></figure>
 </li>
-<li><p>不需要进行操作，点击  next</p>
+<li><p>idea 中集成的数据库前端工具   (database–&gt;data source –&gt;mysql)</p>
+<p><img src="/%E4%BD%BF%E7%94%A8-spring-JDBC%E8%AE%BF%E9%97%AE%E6%95%B0%E6%8D%AE%E5%BA%93/001.png"></p>
 </li>
-<li><p>自定义项目的名称，和要保存的路径</p>
-<p> <img src="/spring-%E7%8E%AF%E5%A2%83%E7%9A%84%E6%90%AD%E5%BB%BA/002.png"></p>
+<li><p>设置相关参数</p>
+<p>Name : 可以随便起，一般要和项目相关联</p>
+<p>User ,password  :  mysql 数据库的用户名和密码</p>
+<p>Database ：  要连接的mysql数据库中的与此项目相关的数据库</p>
+<p>MYsql ： 需要配置并选择自己本地的mysql   (点击它–&gt;go to driver)</p>
+<p><img src="/%E4%BD%BF%E7%94%A8-spring-JDBC%E8%AE%BF%E9%97%AE%E6%95%B0%E6%8D%AE%E5%BA%93/002.png"></p>
+<p> 选着好数据库后，点击data source 即可返回以上页面，点击   test connection 测试是否可以连接成功!</p>
+<p><img src="/%E4%BD%BF%E7%94%A8-spring-JDBC%E8%AE%BF%E9%97%AE%E6%95%B0%E6%8D%AE%E5%BA%93/003.png"></p>
+<p>连接成功后即可出现以下页面</p>
+<p><img src="/%E4%BD%BF%E7%94%A8-spring-JDBC%E8%AE%BF%E9%97%AE%E6%95%B0%E6%8D%AE%E5%BA%93/004.png"></p>
 </li>
-<li><p>创建多模块的项目要删除父模块的 src 目录</p>
+<li><p>在 sources 目录下保存自己创建文件并保存 sql 语句</p>
+<p><img src="/%E4%BD%BF%E7%94%A8-spring-JDBC%E8%AE%BF%E9%97%AE%E6%95%B0%E6%8D%AE%E5%BA%93/005.png"></p>
+<p>会在控制台生成脚本代码，手动复制</p>
 </li>
-<li><p>创建多模块  :   选中自己的项目目录，右击  new–&gt;module–&gt;maven–&gt;确定自己要生成的模块（如 database) –&gt;finish</p>
-</li>
-<li><p>会在目录下生成 子pom文件</p>
-</li>
-<li><p>为父 pom 文件增加依赖  将一下代码粘贴到其中</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br></pre></td><td class="code"><pre><span class="line">&lt;properties&gt;</span><br><span class="line">    &lt;project.build.sourceEncoding&gt;UTF-8&lt;/project.build.sourceEncoding&gt;</span><br><span class="line">    &lt;file.encoding&gt;UTF-8&lt;/file.encoding&gt;</span><br><span class="line">    &lt;spring.version&gt;4.3.14.RELEASE&lt;/spring.version&gt;</span><br><span class="line">&lt;/properties&gt;</span><br><span class="line">   </span><br><span class="line">&lt;dependencies&gt;</span><br><span class="line">    &lt;!-- https://mvnrepository.com/artifact/org.springframework/spring-test --&gt;</span><br><span class="line">    &lt;dependency&gt;</span><br><span class="line">        &lt;groupId&gt;org.springframework&lt;/groupId&gt;</span><br><span class="line">        &lt;artifactId&gt;spring-test&lt;/artifactId&gt;</span><br><span class="line">        &lt;version&gt;$&#123;spring.version&#125;&lt;/version&gt;</span><br><span class="line">        &lt;scope&gt;test&lt;/scope&gt;</span><br><span class="line">    &lt;/dependency&gt;</span><br><span class="line">    &lt;!-- https://mvnrepository.com/artifact/org.testng/testng --&gt;</span><br><span class="line">    &lt;dependency&gt;</span><br><span class="line">        &lt;groupId&gt;org.testng&lt;/groupId&gt;</span><br><span class="line">        &lt;artifactId&gt;testng&lt;/artifactId&gt;</span><br><span class="line">        &lt;version&gt;6.14.2&lt;/version&gt;</span><br><span class="line">        &lt;scope&gt;test&lt;/scope&gt;</span><br><span class="line">    &lt;/dependency&gt;</span><br><span class="line">    &lt;!-- https://mvnrepository.com/artifact/org.springframework/spring-beans --&gt;</span><br><span class="line">    &lt;dependency&gt;</span><br><span class="line">        &lt;groupId&gt;org.springframework&lt;/groupId&gt;</span><br><span class="line">        &lt;artifactId&gt;spring-beans&lt;/artifactId&gt;</span><br><span class="line">        &lt;version&gt;$&#123;spring.version&#125;&lt;/version&gt;</span><br><span class="line">    &lt;/dependency&gt;</span><br><span class="line">    &lt;!-- https://mvnrepository.com/artifact/org.springframework/spring-context --&gt;</span><br><span class="line">    &lt;dependency&gt;</span><br><span class="line">        &lt;groupId&gt;org.springframework&lt;/groupId&gt;</span><br><span class="line">        &lt;artifactId&gt;spring-context&lt;/artifactId&gt;</span><br><span class="line">        &lt;version&gt;$&#123;spring.version&#125;&lt;/version&gt;</span><br><span class="line">    &lt;/dependency&gt;</span><br><span class="line">    &lt;!-- https://mvnrepository.com/artifact/org.springframework/spring-context-support --&gt;</span><br><span class="line">    &lt;dependency&gt;</span><br><span class="line">        &lt;groupId&gt;org.springframework&lt;/groupId&gt;</span><br><span class="line">        &lt;artifactId&gt;spring-context-support&lt;/artifactId&gt;</span><br><span class="line">        &lt;version&gt;$&#123;spring.version&#125;&lt;/version&gt;</span><br><span class="line">    &lt;/dependency&gt;</span><br><span class="line">    &lt;!-- https://mvnrepository.com/artifact/org.springframework/spring-aop --&gt;</span><br><span class="line">    &lt;dependency&gt;</span><br><span class="line">        &lt;groupId&gt;org.springframework&lt;/groupId&gt;</span><br><span class="line">        &lt;artifactId&gt;spring-aop&lt;/artifactId&gt;</span><br><span class="line">        &lt;version&gt;$&#123;spring.version&#125;&lt;/version&gt;</span><br><span class="line">    &lt;/dependency&gt;</span><br><span class="line">    &lt;!-- https://mvnrepository.com/artifact/org.aspectj/aspectjweaver --&gt;</span><br><span class="line">    &lt;dependency&gt;</span><br><span class="line">        &lt;groupId&gt;org.aspectj&lt;/groupId&gt;</span><br><span class="line">        &lt;artifactId&gt;aspectjweaver&lt;/artifactId&gt;</span><br><span class="line">        &lt;version&gt;1.8.13&lt;/version&gt;</span><br><span class="line">    &lt;/dependency&gt;</span><br><span class="line">&lt;/dependencies&gt;</span><br><span class="line">   </span><br><span class="line">&lt;build&gt;</span><br><span class="line">    &lt;plugins&gt;</span><br><span class="line">        &lt;!-- https://mvnrepository.com/artifact/org.apache.maven.plugins/maven-compiler-plugin --&gt;</span><br><span class="line">        &lt;plugin&gt;</span><br><span class="line">            &lt;groupId&gt;org.apache.maven.plugins&lt;/groupId&gt;</span><br><span class="line">            &lt;artifactId&gt;maven-compiler-plugin&lt;/artifactId&gt;</span><br><span class="line">            &lt;version&gt;3.7.0&lt;/version&gt;</span><br><span class="line">            &lt;configuration&gt;</span><br><span class="line">                &lt;source&gt;1.8&lt;/source&gt;</span><br><span class="line">                &lt;target&gt;1.8&lt;/target&gt;</span><br><span class="line">            &lt;/configuration&gt;</span><br><span class="line">        &lt;/plugin&gt;</span><br><span class="line">    &lt;/plugins&gt;</span><br><span class="line">&lt;/build&gt;</span><br><span class="line">   </span><br></pre></td></tr></table></figure>
-
-<p>编译执行即可（ build—&gt;rebuild projict)</p>
-<p><img src="/./spring-%E7%8E%AF%E5%A2%83%E7%9A%84%E6%90%AD%E5%BB%BA/003.png"></p>
-<p>缺少的也可取去maven 的全球资源库去下载</p>
-<p> <a target="_blank" rel="noopener" href="https://mvnrepository.com/">Maven Repository: Search&#x2F;Browse&#x2F;Explore (mvnrepository.com)</a> </p>
-<p>输入关键词 如 spring   选择  spring bean 即可选择相应的版本  </p>
-<p>  <img src="/spring-%E7%8E%AF%E5%A2%83%E7%9A%84%E6%90%AD%E5%BB%BA/004.png"></p>
-<p>选中输入框中的内容 复制到pom 文件下即可</p>
-<p>​    <img src="/spring-%E7%8E%AF%E5%A2%83%E7%9A%84%E6%90%AD%E5%BB%BA/005.png"></p>
-</li>
-<li><p>在 resource 目录下创建 装配文件 （new –&gt;Xml configuration file –&gt; spring config)</p>
-<p>命名 为xxxx  ( 如 database-context )</p>
-<p><img src="/spring-%E7%8E%AF%E5%A2%83%E7%9A%84%E6%90%AD%E5%BB%BA/006.png"></p>
-<p><img src="/spring-%E7%8E%AF%E5%A2%83%E7%9A%84%E6%90%AD%E5%BB%BA/007.png"></p>
-</li>
-<li><p>关联facets 中的装配文件  直接点击报错的部分就会给提示自动完成</p>
-</li>
-<li><p>自此 database 就成为了一个 spring 模块</p>
+<li><p>然后在  reasoure 下新建一个  file  命名为  javaee.sql  并保存自己在上一步 复制的脚本代码。</p>
 </li>
 </ol>
 
@@ -541,7 +520,7 @@ file  –&amp;gt; project —&amp;gt;Maven
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://example.com/2022/03/07/spring-%E7%8E%AF%E5%A2%83%E7%9A%84%E6%90%AD%E5%BB%BA/">http://example.com/2022/03/07/spring-%E7%8E%AF%E5%A2%83%E7%9A%84%E6%90%AD%E5%BB%BA/</a>
+                    <a href="http://example.com/2022/03/07/%E4%BD%BF%E7%94%A8-spring-JDBC%E8%AE%BF%E9%97%AE%E6%95%B0%E6%8D%AE%E5%BA%93/">http://example.com/2022/03/07/%E4%BD%BF%E7%94%A8-spring-JDBC%E8%AE%BF%E9%97%AE%E6%95%B0%E6%8D%AE%E5%BA%93/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -754,9 +733,10 @@ file  –&amp;gt; project —&amp;gt;Maven
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;Previous</div>
+                <i class="far fa-dot-circle"></i>&nbsp;Current
+            </div>
             <div class="card">
                 <a href="/2022/03/07/%E4%BD%BF%E7%94%A8-spring-JDBC%E8%AE%BF%E9%97%AE%E6%95%B0%E6%8D%AE%E5%BA%93/">
                     <div class="card-image">
@@ -774,9 +754,9 @@ file  –&amp;gt; project —&amp;gt;Maven
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2022-03-07
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-03-07
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-user fa-fw"></i>
@@ -785,6 +765,7 @@ file  –&amp;gt; project —&amp;gt;Maven
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
@@ -803,13 +784,13 @@ file  –&amp;gt; project —&amp;gt;Maven
                 Next&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2022/02/24/eclipse-tomcat-%E7%9A%84%E9%85%8D%E7%BD%AE/">
+                <a href="/2022/03/07/spring-%E7%8E%AF%E5%A2%83%E7%9A%84%E6%90%AD%E5%BB%BA/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/22.jpg" class="responsive-img" alt="eclipse tomcat 的配置">
+                        <img src="/medias/featureimages/6.jpg" class="responsive-img" alt="spring 环境的搭建">
                         
-                        <span class="card-title">eclipse tomcat 的配置</span>
+                        <span class="card-title">spring 环境的搭建</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -820,7 +801,7 @@ file  –&amp;gt; project —&amp;gt;Maven
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2022-02-24
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-03-07
                             </span>
                         <span class="publish-author">
                             
@@ -833,8 +814,8 @@ file  –&amp;gt; project —&amp;gt;Maven
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/eclipse/">
-                        <span class="chip bg-color">eclipse</span>
+                    <a href="/tags/javaee-spring-mybatis-springmvc/">
+                        <span class="chip bg-color">javaee spring mybatis springmvc</span>
                     </a>
                     
                 </div>
