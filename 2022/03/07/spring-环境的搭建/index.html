@@ -4,11 +4,19 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="eclipse tomcat 的配置, 吃土的小木">
-    <meta name="description" content="1. tomcat 的下载和基本介绍​     启动 tomcat 之前首先安装JDK并配置环境变量JAVA_HOME，若未安装JDK或者未配置JAVA_HOME，启动时会闪退。 
+    <meta name="keywords" content="spring 环境的搭建, 吃土的小木">
+    <meta name="description" content="1. spring环境项目的创建
+file  –&amp;gt; project —&amp;gt;Maven 
+ 
 
-tomcat 的下载地址
- http://tomcat.">
+不需要进行操作，点击  next
+
+自定义项目的名称，和要保存的路径
+ 
+
+创建多模块的项目要删除父模块的 src 目录
+
+创建多模块 ">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -20,7 +28,7 @@ tomcat 的下载地址
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>eclipse tomcat 的配置 | 吃土的小木</title>
+    <title>spring 环境的搭建 | 吃土的小木</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.min.css">
@@ -312,12 +320,12 @@ tomcat 的下载地址
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/22.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/6.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">eclipse tomcat 的配置</h1>
+                    <h1 class="description center-align post-title">spring 环境的搭建</h1>
                 </div>
             </div>
         </div>
@@ -433,8 +441,8 @@ tomcat 的下载地址
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/eclipse/">
-                                <span class="chip bg-color">eclipse</span>
+                            <a href="/tags/javaee-spring-mybatis-springmvc/">
+                                <span class="chip bg-color">javaee spring mybatis springmvc</span>
                             </a>
                         
                     </div>
@@ -449,7 +457,7 @@ tomcat 的下载地址
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>Publish Date:&nbsp;&nbsp;
-                    2022-02-24
+                    2022-03-07
                 </div>
                 
 
@@ -470,69 +478,43 @@ tomcat 的下载地址
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h4 id="1-tomcat-的下载和基本介绍"><a href="#1-tomcat-的下载和基本介绍" class="headerlink" title="1. tomcat 的下载和基本介绍"></a>1. tomcat 的下载和基本介绍</h4><p>​     启动 tomcat 之前首先安装JDK并配置环境变量JAVA_HOME，若未安装JDK或者未配置JAVA_HOME，启动时会闪退。 </p>
-<ol>
-<li><p>tomcat 的下载地址</p>
-<p> <a target="_blank" rel="noopener" href="http://tomcat.apache.org/">http://tomcat.apache.org/</a> </p>
-<p><img src="/.com//001.png"></p>
-<ol start="2">
-<li>进入官网主页，看到左侧栏的download的下载目录，尽量不选择最新的版本，选择较为稳定的版本。目前最新的版本是tomcat 10，这里选择tomcat 9</li>
-</ol>
-<p><img src="/.com//002.png"></p>
-<ol start="3">
-<li><p>为了方便，可直接下载绿色版，下载到本地解压即可（注意别放在中文目录下） </p>
+                <h4 id="1-spring环境项目的创建"><a href="#1-spring环境项目的创建" class="headerlink" title="1. spring环境项目的创建"></a>1. spring环境项目的创建</h4><ol>
+<li><p>file  –&gt; project —&gt;Maven </p>
+<p><img src="/.com//hexo\source_posts\spring-环境的搭建\001.png"> </p>
 </li>
-<li><p><img src="/.com//003.png"></p>
+<li><p>不需要进行操作，点击  next</p>
 </li>
-</ol>
-<p>bin 主要存放二进制可执行文件和脚本。<br>conf 主要存放各种配置文件。<br>lib 主要用来存放Tomcat运行需要加载的jar包。<br>logs 主要存放Tomcat在运行过程中产生的日志文件。<br>temp 主要存放Tomcat在运行过程中产生的临时文件。<br>webapps 主要存放应用程序，当Tomcat启动时会去加载该目录下的应用程序。<br>work 主要存放tomcat在运行时的编译后文件，例如JSP编译后的文件</p>
+<li><p>自定义项目的名称，和要保存的路径</p>
+<p><img src="/.com//hexo\source_posts\spring-环境的搭建\002.png"> </p>
 </li>
-</ol>
-<h4 id="2-tomcat-的启动和关闭"><a href="#2-tomcat-的启动和关闭" class="headerlink" title="2. tomcat 的启动和关闭"></a>2. tomcat 的启动和关闭</h4><ol>
-<li><p>使用bin目录下的批处理文件startup.bat来启动Tomcat服务器 </p>
-<p><img src="/.com//004.png"></p>
+<li><p>创建多模块的项目要删除父模块的 src 目录</p>
 </li>
-<li><p>打开浏览器，在地址栏输入<a target="_blank" rel="noopener" href="https://so.csdn.net/so/search?q=http&spm=1001.2101.3001.7020">http</a>:&#x2F;&#x2F;localhost:8080 或 <a href="http://127.0.0.1:8080进行打开tomcat的主页。若出现如下页面，代表启动成功">http://127.0.0.1:8080进行打开tomcat的主页。若出现如下页面，代表启动成功</a> , 8080是tomcat默认的端口号。</p>
+<li><p>创建多模块  :   选中自己的项目目录，右击  new–&gt;module–&gt;maven–&gt;确定自己要生成的模块（如 database) –&gt;finish</p>
 </li>
-</ol>
-<p>   <img src="/.com//005.png"></p>
-<ol start="3">
-<li><p>使用bin目录下的批处理文件shutdown.bat来关闭Tomcat服务器 </p>
+<li><p>会在目录下生成 子pom文件</p>
 </li>
-<li><p>可以看到，之前启动的控制台窗口中，中文的显示是乱码的，解决如下：</p>
-<p>  右键点击控制台窗口左上角，选择属性，查看启动窗口的编码方式 </p>
-<p><img src="/.com//006.png"></p>
+<li><p>为父 pom 文件增加依赖  将一下代码粘贴到其中</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br></pre></td><td class="code"><pre><span class="line">&lt;properties&gt;</span><br><span class="line">    &lt;project.build.sourceEncoding&gt;UTF-8&lt;/project.build.sourceEncoding&gt;</span><br><span class="line">    &lt;file.encoding&gt;UTF-8&lt;/file.encoding&gt;</span><br><span class="line">    &lt;spring.version&gt;4.3.14.RELEASE&lt;/spring.version&gt;</span><br><span class="line">&lt;/properties&gt;</span><br><span class="line">   </span><br><span class="line">&lt;dependencies&gt;</span><br><span class="line">    &lt;!-- https://mvnrepository.com/artifact/org.springframework/spring-test --&gt;</span><br><span class="line">    &lt;dependency&gt;</span><br><span class="line">        &lt;groupId&gt;org.springframework&lt;/groupId&gt;</span><br><span class="line">        &lt;artifactId&gt;spring-test&lt;/artifactId&gt;</span><br><span class="line">        &lt;version&gt;$&#123;spring.version&#125;&lt;/version&gt;</span><br><span class="line">        &lt;scope&gt;test&lt;/scope&gt;</span><br><span class="line">    &lt;/dependency&gt;</span><br><span class="line">    &lt;!-- https://mvnrepository.com/artifact/org.testng/testng --&gt;</span><br><span class="line">    &lt;dependency&gt;</span><br><span class="line">        &lt;groupId&gt;org.testng&lt;/groupId&gt;</span><br><span class="line">        &lt;artifactId&gt;testng&lt;/artifactId&gt;</span><br><span class="line">        &lt;version&gt;6.14.2&lt;/version&gt;</span><br><span class="line">        &lt;scope&gt;test&lt;/scope&gt;</span><br><span class="line">    &lt;/dependency&gt;</span><br><span class="line">    &lt;!-- https://mvnrepository.com/artifact/org.springframework/spring-beans --&gt;</span><br><span class="line">    &lt;dependency&gt;</span><br><span class="line">        &lt;groupId&gt;org.springframework&lt;/groupId&gt;</span><br><span class="line">        &lt;artifactId&gt;spring-beans&lt;/artifactId&gt;</span><br><span class="line">        &lt;version&gt;$&#123;spring.version&#125;&lt;/version&gt;</span><br><span class="line">    &lt;/dependency&gt;</span><br><span class="line">    &lt;!-- https://mvnrepository.com/artifact/org.springframework/spring-context --&gt;</span><br><span class="line">    &lt;dependency&gt;</span><br><span class="line">        &lt;groupId&gt;org.springframework&lt;/groupId&gt;</span><br><span class="line">        &lt;artifactId&gt;spring-context&lt;/artifactId&gt;</span><br><span class="line">        &lt;version&gt;$&#123;spring.version&#125;&lt;/version&gt;</span><br><span class="line">    &lt;/dependency&gt;</span><br><span class="line">    &lt;!-- https://mvnrepository.com/artifact/org.springframework/spring-context-support --&gt;</span><br><span class="line">    &lt;dependency&gt;</span><br><span class="line">        &lt;groupId&gt;org.springframework&lt;/groupId&gt;</span><br><span class="line">        &lt;artifactId&gt;spring-context-support&lt;/artifactId&gt;</span><br><span class="line">        &lt;version&gt;$&#123;spring.version&#125;&lt;/version&gt;</span><br><span class="line">    &lt;/dependency&gt;</span><br><span class="line">    &lt;!-- https://mvnrepository.com/artifact/org.springframework/spring-aop --&gt;</span><br><span class="line">    &lt;dependency&gt;</span><br><span class="line">        &lt;groupId&gt;org.springframework&lt;/groupId&gt;</span><br><span class="line">        &lt;artifactId&gt;spring-aop&lt;/artifactId&gt;</span><br><span class="line">        &lt;version&gt;$&#123;spring.version&#125;&lt;/version&gt;</span><br><span class="line">    &lt;/dependency&gt;</span><br><span class="line">    &lt;!-- https://mvnrepository.com/artifact/org.aspectj/aspectjweaver --&gt;</span><br><span class="line">    &lt;dependency&gt;</span><br><span class="line">        &lt;groupId&gt;org.aspectj&lt;/groupId&gt;</span><br><span class="line">        &lt;artifactId&gt;aspectjweaver&lt;/artifactId&gt;</span><br><span class="line">        &lt;version&gt;1.8.13&lt;/version&gt;</span><br><span class="line">    &lt;/dependency&gt;</span><br><span class="line">&lt;/dependencies&gt;</span><br><span class="line">   </span><br><span class="line">&lt;build&gt;</span><br><span class="line">    &lt;plugins&gt;</span><br><span class="line">        &lt;!-- https://mvnrepository.com/artifact/org.apache.maven.plugins/maven-compiler-plugin --&gt;</span><br><span class="line">        &lt;plugin&gt;</span><br><span class="line">            &lt;groupId&gt;org.apache.maven.plugins&lt;/groupId&gt;</span><br><span class="line">            &lt;artifactId&gt;maven-compiler-plugin&lt;/artifactId&gt;</span><br><span class="line">            &lt;version&gt;3.7.0&lt;/version&gt;</span><br><span class="line">            &lt;configuration&gt;</span><br><span class="line">                &lt;source&gt;1.8&lt;/source&gt;</span><br><span class="line">                &lt;target&gt;1.8&lt;/target&gt;</span><br><span class="line">            &lt;/configuration&gt;</span><br><span class="line">        &lt;/plugin&gt;</span><br><span class="line">    &lt;/plugins&gt;</span><br><span class="line">&lt;/build&gt;</span><br><span class="line">   </span><br></pre></td></tr></table></figure>
+
+<p>编译执行即可（ build—&gt;rebuild projict)</p>
+<p><img src="/.com//hexo\source_posts\spring-环境的搭建\003.png"></p>
+<p>缺少的也可取去maven 的全球资源库去下载</p>
+<p> <a target="_blank" rel="noopener" href="https://mvnrepository.com/">Maven Repository: Search&#x2F;Browse&#x2F;Explore (mvnrepository.com)</a> </p>
+<p>输入关键词 如 spring   选择  spring bean 即可选择相应的版本  </p>
+<p> <img src="/.com//hexo\source_posts\spring-环境的搭建\004.png"> </p>
+<p>选中输入框中的内容 复制到pom 文件下即可</p>
+<p>   <img src="/.com//hexo\source_posts\spring-环境的搭建\005.png"> </p>
 </li>
-<li><p>控制台编码方式是GBK，为了将编码对应上，那么只需要更改配置文件的编码方式为GBK即可 </p>
+<li><p>在 resource 目录下创建 装配文件 （new –&gt;Xml configuration file –&gt; spring config)</p>
+<p>命名 为xxxx  ( 如 database-context )</p>
+<p><img src="/.com//hexo\source_posts\spring-环境的搭建\006.png"></p>
+<p><img src="/.com//hexo\source_posts\spring-环境的搭建\007.png"></p>
 </li>
-<li><p>logging.properties文件修改为java.util.logging.ConsoleHandler.encoding &#x3D; GBK</p>
+<li><p>关联facets 中的装配文件  直接点击报错的部分就会给提示自动完成</p>
 </li>
-</ol>
-<p>   <img src="/.com//007.png"></p>
-<p>   <img src="/.com//008.png"></p>
-<ol start="7">
-<li>修改完成后，再次启动tomcat , 可以看到，乱码问题已被解决</li>
-</ol>
-<h4 id="3-tomcat-与-eclipse-的配置"><a href="#3-tomcat-与-eclipse-的配置" class="headerlink" title="3. tomcat 与 eclipse 的配置"></a>3. tomcat 与 eclipse 的配置</h4><ol>
-<li><p>打开Eclipse，单击“Window”菜单，选择下方的“Preferences”。 </p>
-<p> <img src="/.com//009.png"></p>
-</li>
-<li><p>单击“Server”选项，选择下方的“Runtime Environments” </p>
-<p><img src="/.com//010.png"></p>
-</li>
-<li><p>点击“Add”添加Tomcat</p>
+<li><p>自此 database 就成为了一个 spring 模块</p>
 </li>
 </ol>
-<pre><code>![](eclipse-tomcat-的配置/011.png)
-</code></pre>
-<ol start="4">
-<li><p>点击“Next”，选中自己安装的Tomcat路径</p>
-</li>
-<li><p>点击“Finish”完成</p>
-</li>
-</ol>
-<pre><code>![](eclipse-tomcat-的配置/012.png)
-</code></pre>
 
                 
             </div>
@@ -559,7 +541,7 @@ tomcat 的下载地址
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://example.com/2022/02/24/eclipse-tomcat-%E7%9A%84%E9%85%8D%E7%BD%AE/">http://example.com/2022/02/24/eclipse-tomcat-%E7%9A%84%E9%85%8D%E7%BD%AE/</a>
+                    <a href="http://example.com/2022/03/07/spring-%E7%8E%AF%E5%A2%83%E7%9A%84%E6%90%AD%E5%BB%BA/">http://example.com/2022/03/07/spring-%E7%8E%AF%E5%A2%83%E7%9A%84%E6%90%AD%E5%BB%BA/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -597,8 +579,8 @@ tomcat 的下载地址
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/eclipse/">
-                                    <span class="chip bg-color">eclipse</span>
+                                <a href="/tags/javaee-spring-mybatis-springmvc/">
+                                    <span class="chip bg-color">javaee spring mybatis springmvc</span>
                                 </a>
                             
                         </div>
@@ -772,9 +754,10 @@ tomcat 的下载地址
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;Previous</div>
+                <i class="far fa-dot-circle"></i>&nbsp;Current
+            </div>
             <div class="card">
                 <a href="/2022/03/07/spring-%E7%8E%AF%E5%A2%83%E7%9A%84%E6%90%AD%E5%BB%BA/">
                     <div class="card-image">
@@ -792,9 +775,9 @@ tomcat 的下载地址
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2022-03-07
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-03-07
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-user fa-fw"></i>
@@ -803,6 +786,7 @@ tomcat 的下载地址
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
@@ -821,13 +805,13 @@ tomcat 的下载地址
                 Next&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2022/02/22/eclipse-for-javaee-%E4%B8%8B%E8%BD%BD%E5%8F%8A%E9%85%8D%E7%BD%AE/">
+                <a href="/2022/02/24/eclipse-tomcat-%E7%9A%84%E9%85%8D%E7%BD%AE/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/13.jpg" class="responsive-img" alt="eclipse for javaee 下载及配置">
+                        <img src="/medias/featureimages/22.jpg" class="responsive-img" alt="eclipse tomcat 的配置">
                         
-                        <span class="card-title">eclipse for javaee 下载及配置</span>
+                        <span class="card-title">eclipse tomcat 的配置</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -838,7 +822,7 @@ tomcat 的下载地址
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2022-02-22
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-02-24
                             </span>
                         <span class="publish-author">
                             
