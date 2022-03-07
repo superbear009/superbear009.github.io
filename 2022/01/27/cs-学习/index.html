@@ -489,20 +489,20 @@ CobaltStrike是一款渗透测试神器，被业界人称为CS神器。CobaltStr
 <p>jdk: Oracle Jdk 15.0.1</p>
 </li>
 </ol>
-<p>   <img src="/.com//001.png"></p>
+<p>   <img src="/cs-%E5%AD%A6%E4%B9%A0/001.png"></p>
 <ol start="2">
 <li><p>将下载好的cobaltstrike上传到kali的主文件夹，</p>
-<p><img src="/.com//002.png"></p>
+<p><img src="/cs-%E5%AD%A6%E4%B9%A0/002.png"></p>
 </li>
 </ol>
 <h5 id="2-运行客户端服务端"><a href="#2-运行客户端服务端" class="headerlink" title="2. 运行客户端服务端"></a>2. 运行客户端服务端</h5><ol>
 <li><p>在cobaltstrike文件夹下运行终端：</p>
-<p> <img src="/.com//003.png"></p>
+<p> <img src="/cs-%E5%AD%A6%E4%B9%A0/003.png"></p>
 </li>
 <li><p>终端输入 <strong>.&#x2F; teamserver A B C D</strong> 即teamserver 命令后跟ABCD四个参数：</p>
 <p> A是服务端IP，B是密码，C是配置文件），D是超时日期（可不加），即连接超时日期，超过这个时间拒绝客户端连接，一般 不写</p>
 <p> 例如：**.&#x2F;teamserver 192.168.31.108 123456** （要使用英文输入法，不然会报错）</p>
-<p><img src="/.com//004.png"></p>
+<p><img src="/cs-%E5%AD%A6%E4%B9%A0/004.png"></p>
 </li>
 <li><p>以上是在kali中（服务器）中运行的步骤，再在相同的界面运行终端（客户端）</p>
 <p>在此 主机修改为 你自己的kali虚拟机的ip,密码为你在设置的密码，我的是主机是192.168.31.108，密码是123456，</p>
@@ -511,17 +511,17 @@ CobaltStrike是一款渗透测试神器，被业界人称为CS神器。CobaltStr
 </ol>
 <h5 id="3-客户端在kali中运行"><a href="#3-客户端在kali中运行" class="headerlink" title="3. 客户端在kali中运行"></a>3. 客户端在kali中运行</h5><ol>
 <li><p>输入 .&#x2F;cs.bat运行</p>
-<p><img src="/.com//005.png"></p>
+<p><img src="/cs-%E5%AD%A6%E4%B9%A0/005.png"></p>
 </li>
 </ol>
 <h5 id="4-客户端在win10中运行"><a href="#4-客户端在win10中运行" class="headerlink" title="4. 客户端在win10中运行"></a>4. 客户端在win10中运行</h5><ol>
 <li><p>建议在运行前，先拍摄快照，然后关闭防火墙，打开cobaltstrike文件夹，点击teamserver.bat，然后点击cs.bat</p>
 <p>会出现：</p>
-<p><img src="/.com//006.png"></p>
+<p><img src="/cs-%E5%AD%A6%E4%B9%A0/006.png"></p>
 <p>以上就完成了服务端与客户端的连接。（建议在kali中运行）</p>
 </li>
 </ol>
-<h4 id="cobaltstrik客户端界面的基本介绍"><a href="#cobaltstrik客户端界面的基本介绍" class="headerlink" title="cobaltstrik客户端界面的基本介绍"></a>cobaltstrik客户端界面的基本介绍</h4><p> <img src="/.com//007.png"></p>
+<h4 id="cobaltstrik客户端界面的基本介绍"><a href="#cobaltstrik客户端界面的基本介绍" class="headerlink" title="cobaltstrik客户端界面的基本介绍"></a>cobaltstrik客户端界面的基本介绍</h4><p> <img src="/cs-%E5%AD%A6%E4%B9%A0/007.png"></p>
 <h4 id="4-攻击步骤："><a href="#4-攻击步骤：" class="headerlink" title="4.攻击步骤："></a>4.攻击步骤：</h4><h5 id="1-创建监听器"><a href="#1-创建监听器" class="headerlink" title="1. 创建监听器"></a>1. 创建监听器</h5><ol>
 <li><p>CobaltStrike的内置监听器为Beacon，外置监听器为Foreign。CobaltStrike的Beacon支持异步通信和交互式通信。</p>
 <p>点击左上方CobaltStrike选项——&gt;在下拉框中选择监听器（ Listeners ）——&gt;在下方弹出区域中单机add</p>
@@ -531,7 +531,7 @@ CobaltStrike是一款渗透测试神器，被业界人称为CS神器。CobaltStr
 <p>HTTP Port(C2): C2监听的端口</p>
 </li>
 </ol>
-<p><img src="/.com//008.png"></p>
+<p><img src="/cs-%E5%AD%A6%E4%B9%A0/008.png"></p>
 <ol start="2">
 <li><p>名字： 可以随便起， 我的是监听器001</p>
 <p>HTTP HOSTS: 点击右边加号保持默认就可以，</p>
@@ -541,7 +541,7 @@ CobaltStrike是一款渗透测试神器，被业界人称为CS神器。CobaltStr
 </ol>
 <h5 id="2-创建攻击Attacks-生成后门"><a href="#2-创建攻击Attacks-生成后门" class="headerlink" title="2. 创建攻击Attacks(生成后门)"></a>2. 创建攻击Attacks(生成后门)</h5><ol>
 <li><p>点击中间的攻击———&gt;生成后门</p>
-<p><img src="/.com//009.png"></p>
+<p><img src="/cs-%E5%AD%A6%E4%B9%A0/009.png"></p>
 <p>HTML Application 　　　　　　 生成一个恶意HTML Application木马，后缀格式为 .hta。通过HTML调用其他语 言的应用组件进行攻击，提供了 可执行文件、PowerShell、VBA三种方法。</p>
 <p>· MS Office Macro 　　　　　　 生成office宏病毒文件；</p>
 <p>· Payload Generator 　　　　　 生成各种语言版本的payload，可以生成基于C、C#、COM Scriptlet、Java、Perl、 PowerShell、Python、Ruby、VBA等的payload</p>
@@ -549,68 +549,68 @@ CobaltStrike是一款渗透测试神器，被业界人称为CS神器。CobaltStr
 <p>· Windows Executable(S)　　　　用于生成一个exe可执行文件，其中包含Beacon的完整payload，不需要阶段性的请求。与Windows Executable模块相比，该模块额外提供了代理设置，以便在较为苛刻的环境中进行渗透测试。该模块还支持powershell脚本，可用于将Stageless Payload注入内存</p>
 </li>
 </ol>
-<h4 id="5-举个例子"><a href="#5-举个例子" class="headerlink" title="5.举个例子"></a>5.举个例子</h4><h5 id="1-基于PowerShell方式生成的hta文件（可能不会成功）"><a href="#1-基于PowerShell方式生成的hta文件（可能不会成功）" class="headerlink" title="1. 基于PowerShell方式生成的hta文件（可能不会成功）"></a>1. 基于PowerShell方式生成的hta文件（可能不会成功）</h5><p><img src="/.com//010.png"></p>
+<h4 id="5-举个例子"><a href="#5-举个例子" class="headerlink" title="5.举个例子"></a>5.举个例子</h4><h5 id="1-基于PowerShell方式生成的hta文件（可能不会成功）"><a href="#1-基于PowerShell方式生成的hta文件（可能不会成功）" class="headerlink" title="1. 基于PowerShell方式生成的hta文件（可能不会成功）"></a>1. 基于PowerShell方式生成的hta文件（可能不会成功）</h5><p><img src="/cs-%E5%AD%A6%E4%B9%A0/010.png"></p>
 <ol>
 <li><p>点击攻击–&gt;生成后门–&gt;HTML Application</p>
 <p> 监听器选着刚才自己生成的，</p>
 <p> Method：选着PowerShell</p>
 <p> 点击 generate</p>
-<p><img src="/.com//011.png"></p>
+<p><img src="/cs-%E5%AD%A6%E4%B9%A0/011.png"></p>
 </li>
 <li><p>建议保存在桌面</p>
 <p>然后 选着攻击–&gt;钓鱼攻击—&gt;文件下载</p>
-<p><img src="/.com//012.png"></p>
+<p><img src="/cs-%E5%AD%A6%E4%B9%A0/012.png"></p>
 </li>
 <li><p>文件： 选着刚才保存在桌面的 evil.hta文件</p>
 <p>local URL：可以保持默认，也可以自己任意指定</p>
-<p><img src="/.com//013.png"></p>
+<p><img src="/cs-%E5%AD%A6%E4%B9%A0/013.png"></p>
 </li>
 <li><p>复制框中内容</p>
-<p><img src="/.com//014.png"></p>
+<p><img src="/cs-%E5%AD%A6%E4%B9%A0/014.png"></p>
 </li>
 <li><p>打开目标主机win10中 cmd控制端 输入mshta +框内内容</p>
-<p><img src="/.com//015.png"></p>
+<p><img src="/cs-%E5%AD%A6%E4%B9%A0/015.png"></p>
 </li>
 <li><p>会显示，，但客户端不会出现任何信息，无法实现开启后门</p>
-<p><img src="/.com//016.png"></p>
+<p><img src="/cs-%E5%AD%A6%E4%B9%A0/016.png"></p>
 </li>
 </ol>
 <h5 id="2-可实现方案"><a href="#2-可实现方案" class="headerlink" title="2. (可实现方案 )"></a>2. (可实现方案 )</h5><ol>
 <li><p>点击攻击–&gt;钓鱼攻击–Scripted Web Delivery(s)</p>
-<p><img src="/.com//017.png"></p>
-<p><img src="/.com//018.png"></p>
+<p><img src="/cs-%E5%AD%A6%E4%B9%A0/017.png"></p>
+<p><img src="/cs-%E5%AD%A6%E4%B9%A0/018.png"></p>
 </li>
 <li><p>路径可以根据自己的情况保存，默认也行，</p>
 <p>监听器选着刚才创建好的就行</p>
 <p>类型选着PowerShell</p>
 </li>
 <li><p>X64 如果目标电脑是64 位的要选上，点击开始</p>
-<p><img src="/.com//019.png"></p>
+<p><img src="/cs-%E5%AD%A6%E4%B9%A0/019.png"></p>
 </li>
 <li><p>然后将框内的内容复制下来，</p>
-<p><img src="/.com//020.png"></p>
+<p><img src="/cs-%E5%AD%A6%E4%B9%A0/020.png"></p>
 </li>
 <li><p>在目标机右击win图标，选着windows Powshell(管理员A)</p>
 <p>将复制的内容粘到上边运行，返回cobaltstrike客户端 会发现，出现了目标主机的信息(大约等60s)</p>
-<p><img src="/.com//021.png"></p>
+<p><img src="/cs-%E5%AD%A6%E4%B9%A0/021.png"></p>
 </li>
 <li><p>右击会出现</p>
-<p><img src="/.com//022.png"></p>
+<p><img src="/cs-%E5%AD%A6%E4%B9%A0/022.png"></p>
 </li>
 <li><p>点击 进入beacon</p>
 </li>
 <li><p>在最低端beacon处 输入 sleep 2</p>
-<p><img src="/.com//023.png"></p>
+<p><img src="/cs-%E5%AD%A6%E4%B9%A0/023.png"></p>
 </li>
 <li><p>等到出现最下面一行，后门开启成功</p>
 </li>
 </ol>
 <h5 id="3-获取后的相关操作"><a href="#3-获取后的相关操作" class="headerlink" title="3.获取后的相关操作"></a>3.获取后的相关操作</h5><ol>
 <li><p>在beacon界面，可以右击 选着目标—&gt;文件管理 即可观察目标机的文件信息</p>
-<p><img src="/.com//024.png"></p>
+<p><img src="/cs-%E5%AD%A6%E4%B9%A0/024.png"></p>
 </li>
 <li><p>最下面的按钮，也可对目标机的文件进行改动，或上传病毒，，其他的功能可一一尝试</p>
-<p><img src="/.com//025.png"></p>
+<p><img src="/cs-%E5%AD%A6%E4%B9%A0/025.png"></p>
 </li>
 <li><p>最下面的按钮，也可对目标机的文件进行改动，或上传病毒，，其他的功能可一一尝试</p>
 </li>
@@ -625,35 +625,35 @@ CobaltStrike是一款渗透测试神器，被业界人称为CS神器。CobaltStr
 <h5 id="2-步骤："><a href="#2-步骤：" class="headerlink" title="2.步骤："></a>2.步骤：</h5><ol>
 <li><p>加载 cna 脚本</p>
 <p><code>Cobalt Strike</code> → 脚本管理器 → <code>Load</code> → Erebus 中的 Main.cna</p>
-<p><img src="/.com//026.png"></p>
-<p><img src="/.com//027.png"></p>
+<p><img src="/cs-%E5%AD%A6%E4%B9%A0/026.png"></p>
+<p><img src="/cs-%E5%AD%A6%E4%B9%A0/027.png"></p>
 <ol start="2">
 <li><p>生成 payload 可执行文件</p>
 <p>攻击 → <code>生成后门</code> → &#96;Windows Executable(S)</p>
-<p><img src="/.com//028.png"></p>
+<p><img src="/cs-%E5%AD%A6%E4%B9%A0/028.png"></p>
 <ol start="3">
 <li><p>保存为 xiaoxue.exe</p>
-<p><img src="/.com//029.png"></p>
+<p><img src="/cs-%E5%AD%A6%E4%B9%A0/029.png"></p>
 <p>上传 payload 可执行文件到目标主机</p>
 <p> 通过 Cobalt Strike 的 <code>File Browser</code> 进行上传。</p>
-<p><img src="/.com//030.png"></p>
+<p><img src="/cs-%E5%AD%A6%E4%B9%A0/030.png"></p>
 </li>
 </ol>
 </li>
 </ol>
 </li>
 </ol>
-<p><img src="/.com//031.png"></p>
+<p><img src="/cs-%E5%AD%A6%E4%B9%A0/031.png"></p>
 <ol start="4">
 <li>这里要注意：首先上传的文件路径最好没有空格，不然可能会导致错误；其次最好上传至彩色（不是灰色的）的文件夹路径下。</li>
 </ol>
 <h5 id="3-通过插件添加服务"><a href="#3-通过插件添加服务" class="headerlink" title="3. 通过插件添加服务"></a>3. 通过插件添加服务</h5><ol>
 <li><p>对于肉鸡，右击点击 Erebus–&gt;Persistence–&gt;Service</p>
-<p><img src="/.com//032.png"></p>
+<p><img src="/cs-%E5%AD%A6%E4%B9%A0/032.png"></p>
 </li>
 <li><p>修改 Bin Path 为如图所示：</p>
-<p><img src="/.com//033.png"></p>
-<p><img src="/.com//034.png"></p>
+<p><img src="/cs-%E5%AD%A6%E4%B9%A0/033.png"></p>
+<p><img src="/cs-%E5%AD%A6%E4%B9%A0/034.png"></p>
 </li>
 <li><p>后就通过 <code>SC</code> 命令把此 <code>xiaoxue.exe</code> 添加进了开机启动项，从而初始了一个权限为 <code>SYSTEM</code> 的 Beacon。</p>
 <p>其效果等同于在 Beacon 控制台中输入：</p>
@@ -665,7 +665,7 @@ CobaltStrike是一款渗透测试神器，被业界人称为CS神器。CobaltStr
 </ol>
 <h5 id="4-重启目标机器测试-Beacon-留存"><a href="#4-重启目标机器测试-Beacon-留存" class="headerlink" title="4. 重启目标机器测试 Beacon 留存"></a>4. 重启目标机器测试 Beacon 留存</h5><ol>
 <li><p>重启</p>
-<p><img src="/.com//035.png"></p>
+<p><img src="/cs-%E5%AD%A6%E4%B9%A0/035.png"></p>
 <p>会看到 Beacon，权限维持成功！</p>
 </li>
 </ol>

@@ -498,11 +498,11 @@
 <li><p>进入vulhub-master的nginx&#x2F;nginx_parsing_vulnerability目录下</p>
 </li>
 <li><p>打开终端，切换到 root 用户</p>
-<p><img src="/.com//001.png"></p>
+<p><img src="/Nginx-%E8%A7%A3%E6%9E%90%E6%BC%8F%E6%B4%9E%E5%A4%8D%E7%8E%B0/001.png"></p>
 </li>
 <li><p>docker启动环境</p>
 <p>docker-compose up -d</p>
-<p><img src="/.com//002.png"></p>
+<p><img src="/Nginx-%E8%A7%A3%E6%9E%90%E6%BC%8F%E6%B4%9E%E5%A4%8D%E7%8E%B0/002.png"></p>
 </li>
 <li><p>打开浏览器，输入 127.0.0.1&#x2F;index.php 查看环境是否搭建成功</p>
 <p>在windows上访问该网址，输入 192.168.44.137&#x2F;index.php</p>
@@ -517,41 +517,41 @@
 <p>如图所示</p>
 </li>
 <li><p>选着图片，点击上传，即可抓取到数据包，如图所示</p>
-<p><img src="/.com//003.png"></p>
+<p><img src="/Nginx-%E8%A7%A3%E6%9E%90%E6%BC%8F%E6%B4%9E%E5%A4%8D%E7%8E%B0/003.png"></p>
 </li>
 <li><p>在数据末尾添加 php代码 ，如图</p>
-<p><img src="/.com//004.png"></p>
+<p><img src="/Nginx-%E8%A7%A3%E6%9E%90%E6%BC%8F%E6%B4%9E%E5%A4%8D%E7%8E%B0/004.png"></p>
 </li>
 <li><p>修改完后，发送</p>
-<p><img src="/.com//005.png"></p>
+<p><img src="/Nginx-%E8%A7%A3%E6%9E%90%E6%BC%8F%E6%B4%9E%E5%A4%8D%E7%8E%B0/005.png"></p>
 </li>
 <li><p>访问 <a target="_blank" rel="noopener" href="http://192.168.44.137/uploadfiles/006.jpg">http://192.168.44.137/uploadfiles/006.jpg</a></p>
-<p><img src="/.com//006.png"></p>
+<p><img src="/Nginx-%E8%A7%A3%E6%9E%90%E6%BC%8F%E6%B4%9E%E5%A4%8D%E7%8E%B0/006.png"></p>
 </li>
 <li><p>访问 <a target="_blank" rel="noopener" href="http://192.168.44.137/uploadfiles/006.jpg/.php,%E7%9C%8B%E5%88%B0%E6%88%90%E5%8A%9F%E6%89%A7%E8%A1%8C%E4%BA%86php%E4%BB%A3%E7%A0%81,%E8%AF%B4%E6%98%8E%E5%AD%98%E5%9C%A8%E8%A7%A3%E6%9E%90%E6%BC%8F%E6%B4%9E">http://192.168.44.137/uploadfiles/006.jpg/.php,看到成功执行了php代码,说明存在解析漏洞</a></p>
-<p><img src="/.com//007.png"></p>
+<p><img src="/Nginx-%E8%A7%A3%E6%9E%90%E6%BC%8F%E6%B4%9E%E5%A4%8D%E7%8E%B0/007.png"></p>
 </li>
 </ol>
 </li>
 <li><p>也可在图片中插入一句话木马，然后用蚁剑 去连接，方便对目标机的操作</p>
 <p>同理操作，只是在数据包中添加的php 代码改为 一句话木马即可，如</p>
-<p><img src="/.com//008.png"></p>
+<p><img src="/Nginx-%E8%A7%A3%E6%9E%90%E6%BC%8F%E6%B4%9E%E5%A4%8D%E7%8E%B0/008.png"></p>
 <p>上传成功后，解析如下，</p>
-<p><img src="/.com//010.png"></p>
+<p><img src="/Nginx-%E8%A7%A3%E6%9E%90%E6%BC%8F%E6%B4%9E%E5%A4%8D%E7%8E%B0/010.png"></p>
 </li>
 <li><p>在蚁剑中 输入相应的 连接 和 密码即可连接成功，对目标机的进行相应的操作。</p>
 <p>URL 为 带 .php的网址的链接，如图，密码为你输入一句话木马设定的密码</p>
-<p><img src="/.com//011.png"></p>
+<p><img src="/Nginx-%E8%A7%A3%E6%9E%90%E6%BC%8F%E6%B4%9E%E5%A4%8D%E7%8E%B0/011.png"></p>
 <p>成功后 如图</p>
-<p><img src="/.com//013.png"></p>
+<p><img src="/Nginx-%E8%A7%A3%E6%9E%90%E6%BC%8F%E6%B4%9E%E5%A4%8D%E7%8E%B0/013.png"></p>
 <p>然后双击就可进入目标机的文档目录</p>
-<p><img src="/.com//014.png"></p>
+<p><img src="/Nginx-%E8%A7%A3%E6%9E%90%E6%BC%8F%E6%B4%9E%E5%A4%8D%E7%8E%B0/014.png"></p>
 <p>在目标机的主机上也可查看传入的带木马的图片</p>
-<p><img src="/.com//015.png"></p>
+<p><img src="/Nginx-%E8%A7%A3%E6%9E%90%E6%BC%8F%E6%B4%9E%E5%A4%8D%E7%8E%B0/015.png"></p>
 <p>如，上传一个文件，点击 右键—&gt;上传—-&gt;选着上传的文件即可。</p>
 </li>
 <li><p>完成测试后，关闭容器 docker-compose down</p>
-<p><img src="/.com//016.png"></p>
+<p><img src="/Nginx-%E8%A7%A3%E6%9E%90%E6%BC%8F%E6%B4%9E%E5%A4%8D%E7%8E%B0/016.png"></p>
 </li>
 </ol>
 <h4 id="漏洞的修复"><a href="#漏洞的修复" class="headerlink" title="漏洞的修复"></a>漏洞的修复</h4><ol>

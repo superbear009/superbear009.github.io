@@ -479,58 +479,58 @@
 </li>
 <li><p>docker启动环境</p>
 <p>docker-compose up -d</p>
-<p><img src="/.com//001.png"></p>
+<p><img src="/Heartbleed-%E6%BC%8F%E6%B4%9E%E5%A4%8D%E7%8E%B0/001.png"></p>
 </li>
 <li><p>打开本地浏览器 访问127.0.0.1&#x2F;index.html</p>
-<p><img src="/.com//002.png"></p>
+<p><img src="/Heartbleed-%E6%BC%8F%E6%B4%9E%E5%A4%8D%E7%8E%B0/002.png"></p>
 </li>
 </ol>
 <h5 id="开始攻击"><a href="#开始攻击" class="headerlink" title="开始攻击"></a>开始攻击</h5><ol>
 <li><p>开启 metasploit</p>
-<p><img src="/.com//003.png"></p>
+<p><img src="/Heartbleed-%E6%BC%8F%E6%B4%9E%E5%A4%8D%E7%8E%B0/003.png"></p>
 </li>
 <li><p>使用 kali 工具 metasploit 对目标机尽心漏洞扫描利用</p>
 <p>目标机 ip 为开启该环境的机器</p>
 <p>nmap -sV -T4 192.168.137.140</p>
-<p><img src="/.com//004.png"></p>
+<p><img src="/Heartbleed-%E6%BC%8F%E6%B4%9E%E5%A4%8D%E7%8E%B0/004.png"></p>
 <p>查看目标机443端口是否存在漏洞</p>
 <p>nmap -sV -p 443 –script ssl-heartbleed.nse 192.168.137.140 可发现主机存在相应的漏洞</p>
-<p><img src="/.com//005.png"></p>
+<p><img src="/Heartbleed-%E6%BC%8F%E6%B4%9E%E5%A4%8D%E7%8E%B0/005.png"></p>
 </li>
 <li><p>搜索metasploit自带的有效载荷</p>
 </li>
 <li><p>使用第一个模块进行利用攻击 输入: use 1</p>
-<p><img src="/.com//006.png"></p>
+<p><img src="/Heartbleed-%E6%BC%8F%E6%B4%9E%E5%A4%8D%E7%8E%B0/006.png"></p>
 </li>
 <li><p>输入 show options 查看需要配置的相关的参数 如 端口，目标主机的ip</p>
-<p><img src="/.com//007.png"></p>
+<p><img src="/Heartbleed-%E6%BC%8F%E6%B4%9E%E5%A4%8D%E7%8E%B0/007.png"></p>
 </li>
 <li><p>输入 run 执行，即可看到相关的信息，</p>
-<p><img src="/.com//008.png"></p>
+<p><img src="/Heartbleed-%E6%BC%8F%E6%B4%9E%E5%A4%8D%E7%8E%B0/008.png"></p>
 </li>
 <li><p>查看详细的信息 设置verbose，这个设置要设置成true才能看到泄露的信息</p>
-<p><img src="/.com//009.png"></p>
-<p><img src="/.com//010.png"></p>
-<p><img src="/.com//011.png"></p>
+<p><img src="/Heartbleed-%E6%BC%8F%E6%B4%9E%E5%A4%8D%E7%8E%B0/009.png"></p>
+<p><img src="/Heartbleed-%E6%BC%8F%E6%B4%9E%E5%A4%8D%E7%8E%B0/010.png"></p>
+<p><img src="/Heartbleed-%E6%BC%8F%E6%B4%9E%E5%A4%8D%E7%8E%B0/011.png"></p>
 </li>
 <li><p>如果有人在正在登录该web应用的话，还可能可以直接抓到账号密码等信息。</p>
-<p><img src="/.com//012.png"></p>
+<p><img src="/Heartbleed-%E6%BC%8F%E6%B4%9E%E5%A4%8D%E7%8E%B0/012.png"></p>
 </li>
 <li><p>关闭环境 输入 : docker-compose down</p>
-<p><img src="/.com//016.png"></p>
+<p><img src="/Heartbleed-%E6%BC%8F%E6%B4%9E%E5%A4%8D%E7%8E%B0/016.png"></p>
 </li>
 </ol>
 <p>补充</p>
 <p>也可使用 python 脚本对有此漏洞的目标机进行攻击 设置相应地 ip 地址 端口号 即可</p>
 <p>在 linux 中输入 python3 ssltest.py 192.168.137.140 443</p>
-<p><img src="/.com//013.png"></p>
+<p><img src="/Heartbleed-%E6%BC%8F%E6%B4%9E%E5%A4%8D%E7%8E%B0/013.png"></p>
 <h4 id="防护建议"><a href="#防护建议" class="headerlink" title="防护建议"></a>防护建议</h4><ol>
 <li><p>简单粗暴的方法就是升级openssl软件</p>
 </li>
 <li><p>使用<code>-DOPENSSL_NO_HEARTBEATS</code>选项重新编译OpenSSL，从而禁用易受攻击的功能，直至可以更新服务器软件</p>
 </li>
 <li><p>利用 OpenSSL“心脏出血”漏洞（CVE-2014-0160）的在线检测网站：<a target="_blank" rel="noopener" href="https://possible.lv/tools/hb/">heartbleed test</a>，输入待测站点的网站和端口即可进行检测</p>
-<p><img src="/.com//015.png"></p>
+<p><img src="/Heartbleed-%E6%BC%8F%E6%B4%9E%E5%A4%8D%E7%8E%B0/015.png"></p>
 </li>
 </ol>
 
