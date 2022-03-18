@@ -4,10 +4,13 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="hexo博客的搭建, 吃土的小木">
-    <meta name="description" content="hexo 介绍 Hexo是一款基于Node.js的静态博客框架，依赖少易于安装使用，可以方便的生成静态网页托管在GitHub和Coding上，是搭建博客的首选框架。
-工具准备 ： node-v14.15.3-x64.msi
- Git-2.3">
+    <meta name="keywords" content="Pytorch 引入pytorch_geometric, 吃土的小木">
+    <meta name="description" content="
+下载相应的驱动文件
+点击链接 pyg-team&amp;#x2F;pytorch_geometric: Graph Neural Network Library for PyTorch (github.com)
+
+
+   向下滑动找到 pip w">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -19,7 +22,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>hexo博客的搭建 | 吃土的小木</title>
+    <title>Pytorch 引入pytorch_geometric | 吃土的小木</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.min.css">
@@ -311,12 +314,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/19.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/16.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">hexo博客的搭建</h1>
+                    <h1 class="description center-align post-title">Pytorch 引入pytorch_geometric</h1>
                 </div>
             </div>
         </div>
@@ -432,8 +435,8 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/hex%E5%8D%9A%E5%AE%A2%E7%9A%84%E6%90%AD%E5%BB%BA/">
-                                <span class="chip bg-color">hex博客的搭建</span>
+                            <a href="/tags/pytorch/">
+                                <span class="chip bg-color">pytorch</span>
                             </a>
                         
                     </div>
@@ -448,7 +451,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>Publish Date:&nbsp;&nbsp;
-                    2022-01-27
+                    2022-03-18
                 </div>
                 
 
@@ -469,133 +472,57 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h4 id="hexo-介绍"><a href="#hexo-介绍" class="headerlink" title="hexo 介绍"></a>hexo 介绍</h4><p> Hexo是一款基于Node.js的静态博客框架，依赖少易于安装使用，可以方便的生成静态网页托管在GitHub和Coding上，是搭建博客的首选框架。</p>
-<h4 id="工具准备-："><a href="#工具准备-：" class="headerlink" title="工具准备 ："></a>工具准备 ：</h4><p> node-v14.15.3-x64.msi</p>
-<p> Git-2.30.0-64-bit.exe</p>
-<h4 id="相关变量的配置"><a href="#相关变量的配置" class="headerlink" title="相关变量的配置"></a>相关变量的配置</h4><h5 id="在cmd中"><a href="#在cmd中" class="headerlink" title="在cmd中"></a>在cmd中</h5><ol>
-<li><p>查看 node ，npm 的版本</p>
-<p>node -v npm -v</p>
-</li>
-<li><p>下载cnpm 模块</p>
-<p>npm install -g cnpm –registry&#x3D;<a target="_blank" rel="noopener" href="https://registry.npm.taobao.org/">https://registry.npm.taobao.org</a></p>
-</li>
-<li><p>查看 cnpm 版本</p>
-<p>cnpm -v</p>
-</li>
-<li><p>下载hexo</p>
-<p>cnpm install -g hexo-cli</p>
-</li>
-<li><p>查看 hexo 版本</p>
-<p>hexo -v</p>
+                <ol>
+<li><p>下载相应的驱动文件</p>
+<p>点击链接 <a target="_blank" rel="noopener" href="https://github.com/pyg-team/pytorch_geometric">pyg-team&#x2F;pytorch_geometric: Graph Neural Network Library for PyTorch (github.com)</a></p>
 </li>
 </ol>
-<h5 id="在git中"><a href="#在git中" class="headerlink" title="在git中"></a>在git中</h5><ol>
-<li><p>创建一个空的目录 blog</p>
+<p>   向下滑动找到 pip wheels  点击 here</p>
+<p>   <img src="/Pytorch-%E5%BC%95%E5%85%A5pytorch-geometric/002.png"></p>
+<ol start="2">
+<li><p>根据自己的 pytorch 版本点击相应的链接  </p>
+<p> pytorch 版本信息可在  Andaconda prompt 控制台输入，激活环境</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">conda activate pytorch</span><br></pre></td></tr></table></figure>
+
+<p> 输入 python,再输入一下代码即可查看</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">import torch</span><br><span class="line">print(torch.__version__)</span><br></pre></td></tr></table></figure>
+
+<p> __<strong>version</strong>    的下划线是两个下划线 </p>
+<p>查看 cuda版本  的信息  同理 ，但要输入以下代码</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">import torch</span><br><span class="line">print(torch.version.cuda)</span><br></pre></td></tr></table></figure>
 </li>
-<li><p>在blog中以 git bash here 打开 git</p>
-</li>
-<li><p>初始化</p>
-<p>hexo init</p>
-</li>
-<li><p>在本地4000端口打开</p>
-<p>hexo s</p>
-</li>
-<li><p>创建一篇文章 source&#x2F;_posts</p>
-<p>hexo n “我的第一篇博客文章”</p>
-</li>
-<li><p>本地生成</p>
-<p>hexo g</p>
-</li>
-<li><p>安装deploy-git ，也就是部署的命令,这样你才能用命令部署到GitHub</p>
-<p>cnpm install –save hexo-deployer-git</p>
-</li>
-<li><p>将hexo部署到GitHub,这一步，我们就可以将hexo和GitHub关联起来，也就是将hexo生成的文章部署到GitHub上，打开站点配置文件 _config.yml，翻到 最后，修改为YourgithubName就是你的GitHub账户.</p>
-</li>
-<li><p>部署到远端</p>
-<p>以github为仓， 注册一个GitHub账户<br>注册完登录后，在GitHub.com中看到一个New repository，新建仓库，创建一个和你用户名相同的仓库，后面加.github.io，只有这 样，将来要部署到GitHub page的时候，才会被识别，也就是xxxx.github.io，其中xxx就是你注册GitHub的用户名，点击create repository</p>
-</li>
-<li><p>生成SSH添加到GitHub ，回到你的git bash中</p>
-<p>git config –global user.name “yourname”<br>git config –global user.email “youremail”</p>
-<p>这里的yourname输入你的GitHub用户名，youremail输入你GitHub的邮箱。这样GitHub才能知道你是不是对应它的账户。</p>
-<p>可以用以下两条，检查一下你有没有输对</p>
-<p>git config user.name<br>git config user.email</p>
-<p>然后创建SSH,一路回车</p>
-</li>
-<li><p>生成SSH</p>
-<p>ssh-keygen</p>
-<p>ssh，简单来讲，就是一个秘钥，在c:用户&#x2F;xxx&#x2F;.ssh，其中，id_rsa是你这台电脑的私人秘钥，不能给别人看的，id_rsa.pub是公共秘钥，可以随便给别人看。把这个公钥放在GitHub上，这样当你链接GitHub自己的账户时，它就会根据公钥匹配你的私钥，当能够相互匹配时，才能够顺利的通过git上传你的文件到GitHub上。</p>
-</li>
-<li><p>上传id_rsa.pub的信息</p>
-<p>在GitHub的setting中，找到SSH keys的设置选项，点击New SSH key把你的id_rsa.pub里面的信息复制进去</p>
-</li>
-<li><p>在gitbash中,查看是否成功</p>
-<p>ssh -T <a href="mailto:git@github.com">git@github.com</a></p>
-</li>
-<li><p>将hexo部署到GitHub</p>
-<p>这一步，我们就可以将hexo和GitHub关联起来，也就是将hexo生成的文章部署到GitHub上，打开站点配置文件 _config.yml，翻到 最后，修改为YourgithubName就是你的GitHub账户.</p>
-</li>
-<li><p>执行</p>
-<p>hexo clean</p>
-<p>hexo generate</p>
-<p>hexo deploy</p>
+<li><p>进入后 下载自己版本对应的如下类型的四个文件  （一定要记好文件下载的地址）</p>
 </li>
 </ol>
-<h4 id="选择主题"><a href="#选择主题" class="headerlink" title="选择主题"></a>选择主题</h4><ol>
-<li><p>以 matery 为例</p>
-<p>git clone <a target="_blank" rel="noopener" href="https://github.com/blinkfox/hexo-theme-matery.git">https://github.com/blinkfox/hexo-theme-matery.git</a> themes&#x2F;matery</p>
+<p>   <img src="/Pytorch-%E5%BC%95%E5%85%A5pytorch-geometric/003.png"></p>
+<ol start="4">
+<li><p>运行Andaconda prompt 控制台，并激活环境</p>
 </li>
-<li><p>在 _config.yml 中的 themes：改为 themes: matery</p>
+<li><p>切换到四个文件的地址</p>
 </li>
-<li><p>在hexo中下载图片插件</p>
-<p>cnpm install hexo-asset-image –save</p>
+<li><p>分别 安装这四个文件</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip install torch_cluster-1.6.0-cp39-cp39-win_amd64.whl</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip install torch_scatter-2.0.9-cp39-cp39-win_amd64.whl</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip install torch_sparse-0.6.13-cp39-cp39-win_amd64.whl</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip install torch_spline_conv-1.2.1-cp39-cp39-win_amd64.whl</span><br></pre></td></tr></table></figure>
 </li>
-<li><p>在_config.yml配置文件中，修改为 post_asset_folder: true</p>
+<li><p>安装完成后  安装  geometric</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip install torch-geometric</span><br></pre></td></tr></table></figure>
 </li>
-<li><p>新建一篇文章</p>
-<p>hexo n “hahahaha”</p>
+<li><p>安装成功后  输入 python</p>
 </li>
-<li><p>在根目录 blog\source_posts 文件夹下会出现一个hahaha.md 和hahaha文件夹</p>
+<li><p>若输入以下代码回车不报错即安装成功</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">import torch_geometric</span><br></pre></td></tr></table></figure>
+
 </li>
-<li><p>将文档中的图片引入到同名的文件夹中即可。</p>
-</li>
-</ol>
-<h4 id="常见问题的问题的解决"><a href="#常见问题的问题的解决" class="headerlink" title="常见问题的问题的解决"></a>常见问题的问题的解决</h4><ol>
-<li><p>git出错：“Please make sure you have the correct access rights and the repository exists.</p>
-<p>ssh 需要重置</p>
+<li><p>参考链接</p>
 <ol>
-<li><p>重置用户名和邮箱</p>
-<ol>
-<li><p>git config –global user.name “yourname”</p>
-</li>
-<li><p>git config –global user.email “<a href="mailto:&#x79;&#111;&#x75;&#114;&#x40;&#101;&#109;&#97;&#x69;&#108;&#46;&#x63;&#x6f;&#x6d;">&#x79;&#111;&#x75;&#114;&#x40;&#101;&#109;&#97;&#x69;&#108;&#46;&#x63;&#x6f;&#x6d;</a>“</p>
-<p>yourname: 你要设置的邮箱</p>
-<p>your@email: 你要设置的邮箱</p>
-</li>
+<li><img src="file:///C:\Users\14574\AppData\Roaming\Tencent\QQTempSys\8LDO48C$8@[GWU0353$FOVS.png" alt="img"><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV14a411B79C?t=389.7">https://www.bilibili.com/video/BV14a411B79C?t=389.7</a></li>
 </ol>
 </li>
-<li><p>删除 .ssh文件夹下的 known_hosts</p>
-</li>
-<li><p>git 输入命令</p>
-<p>$ ssh-keygen -t rsa -C “<a href="mailto:&#121;&#x6f;&#117;&#x72;&#x40;&#101;&#109;&#x61;&#x69;&#108;&#x2e;&#x63;&#x6f;&#109;">&#121;&#x6f;&#117;&#x72;&#x40;&#101;&#109;&#x61;&#x69;&#108;&#x2e;&#x63;&#x6f;&#109;</a>“ (‘自己设置的邮箱地址’)</p>
-<p>一路回车或yes</p>
-<p>然后系统会自动在 .ssh文件夹下生成两个文件，id_rsa 和 _rsa.pub,打开将里边的东西全部复制</p>
-</li>
-<li><p>打开 <a target="_blank" rel="noopener" href="https://github.com/,%E7%99%BB%E5%BD%95%E4%BD%A0%E7%9A%84%E8%B4%A6%E6%88%B7%EF%BC%8C%E8%BF%9B%E5%85%A5%E8%AE%BE%E7%BD%AE">https://github.com/,登录你的账户，进入设置</a></p>
-<p>进入ssh设置</p>
-<p>在 key 中将复制的内容粘贴进去</p>
-<p>点击 add ssh key</p>
-</li>
-<li><p>在 git 中输入命令 ： ssh -T <a href="mailto:&#x67;&#105;&#x74;&#64;&#103;&#105;&#116;&#x68;&#117;&#98;&#46;&#99;&#111;&#x6d;">&#x67;&#105;&#x74;&#64;&#103;&#105;&#116;&#x68;&#117;&#98;&#46;&#99;&#111;&#x6d;</a></p>
-<p>然后会跳出一堆话</p>
-<p>输入 yes 或 回车，即可解决。</p>
-</li>
-</ol>
-</li>
-</ol>
-<p>参考链接 :</p>
-<ol>
-<li><a target="_blank" rel="noopener" href="https://cloud.tencent.com/developer/article/1572090">git出错：“Please make sure you have the correct access rights and the repository exists. - 云+社区 - 腾讯云 (tencent.com)</a> </li>
-<li><a target="_blank" rel="noopener" href="https://www.cnblogs.com/imtudou/p/11205832.html">使用Hexo+ Github 建站 时 使用 hexo d 命令异常：You should configure deployment settings in _config.yml first! Available deployer plugins: git For more help, you can check the online docs: https://hexo.io/ - 无敌土豆 - 博客园 (cnblogs.com)</a></li>
 </ol>
 
                 
@@ -623,7 +550,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://example.com/2022/01/27/hexo%E5%8D%9A%E5%AE%A2%E7%9A%84%E6%90%AD%E5%BB%BA/">http://example.com/2022/01/27/hexo%E5%8D%9A%E5%AE%A2%E7%9A%84%E6%90%AD%E5%BB%BA/</a>
+                    <a href="http://example.com/2022/03/18/Pytorch-%E5%BC%95%E5%85%A5pytorch-geometric/">http://example.com/2022/03/18/Pytorch-%E5%BC%95%E5%85%A5pytorch-geometric/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -661,8 +588,8 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/hex%E5%8D%9A%E5%AE%A2%E7%9A%84%E6%90%AD%E5%BB%BA/">
-                                    <span class="chip bg-color">hex博客的搭建</span>
+                                <a href="/tags/pytorch/">
+                                    <span class="chip bg-color">pytorch</span>
                                 </a>
                             
                         </div>
@@ -836,62 +763,18 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;Previous</div>
+                <i class="far fa-dot-circle"></i>&nbsp;Current
+            </div>
             <div class="card">
-                <a href="/2022/01/27/python-%E6%96%87%E4%BB%B6%E7%9A%84%E6%89%93%E5%8C%85/">
+                <a href="/2022/03/18/Pytorch-%E5%BC%95%E5%85%A5pytorch-geometric/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/3.jpg" class="responsive-img" alt="python 文件的打包">
+                        <img src="/medias/featureimages/16.jpg" class="responsive-img" alt="Pytorch 引入pytorch_geometric">
                         
-                        <span class="card-title">python 文件的打包</span>
-                    </div>
-                </a>
-                <div class="card-content article-content">
-                    <div class="summary block-with-text">
-                        
-                            
-                        
-                    </div>
-                    <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2022-01-27
-                        </span>
-                        <span class="publish-author">
-                            
-                            <i class="fas fa-user fa-fw"></i>
-                            LHX
-                            
-                        </span>
-                    </div>
-                </div>
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/python-%E6%96%87%E4%BB%B6%E7%9A%84%E6%89%93%E5%8C%85/">
-                        <span class="chip bg-color">python 文件的打包</span>
-                    </a>
-                    
-                </div>
-                
-            </div>
-        </div>
-        
-        
-        <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge right-badge text-color">
-                Current&nbsp;<i class="far fa-dot-circle"></i>
-            </div>
-            <div class="card">
-                <a href="/2022/01/27/hexo%E5%8D%9A%E5%AE%A2%E7%9A%84%E6%90%AD%E5%BB%BA/">
-                    <div class="card-image">
-                        
-                        
-                        <img src="/medias/featureimages/19.jpg" class="responsive-img" alt="hexo博客的搭建">
-                        
-                        <span class="card-title">hexo博客的搭建</span>
+                        <span class="card-title">Pytorch 引入pytorch_geometric</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -902,7 +785,7 @@
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2022-01-27
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-03-18
                             </span>
                         <span class="publish-author">
                             
@@ -916,8 +799,53 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/hex%E5%8D%9A%E5%AE%A2%E7%9A%84%E6%90%AD%E5%BB%BA/">
-                        <span class="chip bg-color">hex博客的搭建</span>
+                    <a href="/tags/pytorch/">
+                        <span class="chip bg-color">pytorch</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                Next&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/2022/03/18/pytorch-%E7%9A%84%E4%B8%8B%E8%BD%BD%E5%92%8C%E5%AE%89%E8%A3%85/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/7.jpg" class="responsive-img" alt="pytorch 的下载和安装">
+                        
+                        <span class="card-title">pytorch 的下载和安装</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-03-18
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-user fa-fw"></i>
+                            LHX
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/pytorch-%E7%9A%84%E5%AE%89%E8%A3%85/">
+                        <span class="chip bg-color">pytorch 的安装</span>
                     </a>
                     
                 </div>
